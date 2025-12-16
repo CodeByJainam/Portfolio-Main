@@ -7,6 +7,7 @@ import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { fadeIn, textVariant } from "../utils/motion";
 
+
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className="xs:w-[255px] w-full">
     <motion.div
@@ -47,18 +48,23 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I'm a Jainam. A Full Stack Web developer with experience in
-        HTML, CSS, and JavaScript, and expertise in frameworks like React, and
-        Bootstrap. I'm a quick learner and to create efficient, scalable, and
-        user-friendly solutions that solve real-world problems. Let's work
-        together to bring our ideas to life!
+        I'm a Jainam. A Full Stack Web developer with experience in HTML, CSS,
+        and JavaScript, and expertise in frameworks like React, and Bootstrap.
+        I'm a quick learner and to create efficient, scalable, and user-friendly
+        solutions that solve real-world problems. Let's work together to bring
+        our ideas to life!
       </motion.p>
-      <button
-        className="mt-10 px-6 py-3 text-white bg-gradient-to-r from-cyan-500 to-indigo-500 rounded-md shadow-md hover:bg-gradient-to-r hover:from-cyan-600 hover:to-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50"
-      
+      <a
+        href="/Jainam_Resume.pdf"
+        download
+        className="inline-block mt-10 px-6 py-3 text-white bg-gradient-to-r from-cyan-500 to-indigo-500 rounded-md shadow-md hover:from-cyan-600 hover:to-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50"
       >
-        <span className="font-semibold flex gap-1.5 items-center"><RiBriefcase4Fill />Download Resume</span>
-      </button>
+        <span className="font-semibold flex gap-1.5 items-center">
+          <RiBriefcase4Fill />
+          Download Resume
+        </span>
+      </a>
+
       <div className="mt-12 flex flex-wrap gap-10">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
